@@ -1,0 +1,467 @@
+// Header
+// HeaderSetup
+$header-mobile-height: 50px;
+$header-desktop-height: 108px;
+$header-background: $grey;
+$header-nav-mobile-height: 214px;
+$header-nav-desktop-height: 180px;
+$header-nav-desktop-width: 400px;
+$header-mobile-bottom-space: 90px;
+$header-border-color: #464646;
+
+// Animated Menu Button
+$menubtn-icon-color: $yellow;
+$menubtn-icon-hover-color: blue;
+$menubtn-background-color: $grey;
+$menubtn-animation: all 0.3s ease;
+
+header {
+  height: $header-mobile-height;
+  background: $header-background;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  overflow: hidden;
+
+  @include transition(height 350ms ease);
+
+  @include hardware;
+
+  form {
+    background: #2c2c2c;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}
+
+.tp-banner-container {
+  top: 0px !important;
+}
+
+.logo {
+  height: 22px;
+  width: 130px;
+  display: block;
+  text-indent: -9999px;
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  background: url(../img/logo.svg) no-repeat center center;
+  background-size: 130px 22px;
+
+  a {
+    display: block;
+    height: 22px;
+  }
+}
+
+.menu-btn {
+  width: 54px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  vertical-align: middle;
+  padding: 10px 15px;
+  margin: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:before {
+    content: '';
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: transparent;
+
+    @include transform(translate(-50%, -50%));
+
+    @include transition($menubtn-animation);
+  }
+
+  span {
+    display: block;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    &:before {
+      top: -8px;
+    }
+
+    &:after {
+      bottom: -8px;
+    }
+  }
+
+  span,
+  span:before,
+  span:after {
+    width: 100%;
+    height: 2px;
+    background: $menubtn-icon-color;
+    transition: $menubtn-animation;
+  }
+
+  &.is-active {
+    &:before {
+      opacity: 1;
+      width: 50px;
+      height: 50px;
+      background: $menubtn-background-color;
+    }
+
+    span {
+      background: transparent;
+
+      &:before {
+        top: 0;
+
+        @include transform(rotate(225deg));
+      }
+
+      &:after {
+        bottom: 0;
+
+        @include transform(rotate(-225deg));
+      }
+    }
+  }
+}
+
+.mainmenu {
+  display: block;
+  opacity: 0;
+  height: $header-nav-mobile-height;
+  width: 170px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 20px;
+  margin-left: -85px;
+
+  @include transition(all 150ms 0ms ease);
+
+  z-index: 99;
+
+  a {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    line-height: 42px;
+  }
+
+  span {
+    display: inline-block;
+    background: red;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px 0 0;
+    position: relative;
+    top: 6px;
+  }
+
+  .sailing {
+    background: url(../img/base64/icon-boat.svg) no-repeat center center;
+    background-size: 24px;
+  }
+
+  .adventure {
+    background: url(../img/base64/icon-adventure.svg) no-repeat center center;
+    background-size: 24px;
+  }
+
+  .australia {
+    background: url(../img/base64/icon-aus.svg) no-repeat center center;
+    background-size: 24px;
+  }
+
+  .hotels {
+    background: url(../img/base64/icon-hotels.svg) no-repeat center center;
+    background-size: 24px;
+  }
+
+  .flights {
+    background: url(../img/base64/icon-flight.svg) no-repeat center center;
+    background-size: 24px;
+  }
+}
+
+.othermenu {
+  display: block;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+
+  a {
+    color: white;
+    line-height: 16px;
+    color: $lightgrey;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .dot {
+    color: $yellow;
+    font-size: 10px;
+    line-height: 16px;
+    position: relative;
+    top: -2px;
+    padding: 0 5px;
+  }
+}
+
+.search-field {
+  background: $grey url(../img/base64/icon-search.svg) no-repeat right 3px center;
+  background-size: 32px;
+  height: 32px;
+  width: 290px;
+  margin: 8px 0;
+
+  @include border-radius(32px);
+
+  border: 0;
+  outline: 0;
+  color: white;
+  font-size: 16px;
+  padding: 5px 15px;
+  line-height: 22px;
+  -webkit-appearance: none;
+  color: $grey;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+  }
+}
+
+header.active {
+  height: 100%;
+
+  form {
+    bottom: 0;
+
+    @include transition(all 350ms 300ms ease);
+  }
+
+  .mainmenu {
+    opacity: 1;
+    margin-top: -122px;
+
+    @include transition(all 350ms 100ms ease);
+  }
+
+  .othermenu {
+    bottom: 60px;
+
+    @include transition(all 350ms 300ms ease);
+  }
+}
+
+@media (min-width: $desktopmq) {
+  body {
+    padding-top: 0;
+  }
+
+  header {
+    height: $header-desktop-height;
+    position: absolute;
+
+    .wrap {
+      max-width: $maxwidth;
+      margin: 0 auto;
+      position: relative;
+      padding: 0 15px;
+    }
+
+    form {
+      height: 68px;
+      width: 185px;
+      padding: 0;
+      top: 0;
+      right: 15px;
+      left: auto;
+      background: $grey;
+    }
+  }
+
+  .tp-banner-container {
+    top: $header-desktop-height !important;
+    margin-bottom: $header-desktop-height;
+  }
+
+  .logo {
+    height: 30px;
+    width: 180px;
+    background-size: 180px 30px;
+    top: 19px;
+    left: 15px;
+
+    a {
+      height: 30px;
+    }
+  }
+
+  .menu-btn {
+    display: none !important;
+  }
+
+  .first-wrap {
+    height: 68px;
+  }
+
+  .second-wrap {
+    height: 40px;
+  }
+
+  .mainmenu {
+    top: auto;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    height: 40px;
+    z-index: 9;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    border-top: 1px solid $header-border-color;
+
+    a {
+      display: block;
+      float: left;
+      height: 40px;
+      line-height: 39px;
+      padding: 0 17px;
+      border-left: 1px solid $header-border-color;
+      font-size: 15px;
+
+      @include transition(all 250ms ease);
+
+      &:hover {
+        background: $header-border-color;
+      }
+
+      &.active {
+        background: $yellow;
+        color: $grey;
+
+        .sailing {
+          background: url(../img/base64/icon-boat-white.svg) no-repeat center center;
+          background-size: 18px;
+        }
+
+        .adventure {
+          background: url(../img/base64/icon-adventure-white.svg) no-repeat center center;
+          background-size: 18px;
+        }
+
+        .australia {
+          background: url(../img/base64/icon-aus-white.svg) no-repeat center center;
+          background-size: 18px;
+        }
+
+        .hotels {
+          background: url(../img/base64/icon-hotels-white.svg) no-repeat center center;
+          background-size: 18px;
+        }
+
+        .flights {
+          background: url(../img/base64/icon-flight-white.svg) no-repeat center center;
+          background-size: 18px;
+        }
+      }
+    }
+
+    span {
+      width: 18px;
+      height: 18px;
+      background-size: 18px;
+      top: 4px;
+      display: none;
+    }
+
+    .sailing, .adventure, .australia, .hotels, .flights {
+      background-size: 18px;
+    }
+
+    li:last-child a {
+      border-right: 1px solid $header-border-color;
+    }
+  }
+
+  .othermenu {
+    top: 26px;
+    right: 220px;
+    bottom: auto;
+    left: auto;
+
+    a {
+      @include transition(all 250ms ease);
+    }
+
+    a:hover {
+      color: white;
+    }
+  }
+
+  .search-field {
+    width: 181px;
+    background-color: black;
+    margin-top: 19px;
+    border: 2px solid black;
+    height: 30px;
+
+    @include transition(all 250ms ease);
+
+    &:focus {
+      border: 2px solid $yellow;
+    }
+  }
+}
+
+@media (min-width: 815px) {
+  .mainmenu {
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+// Stop body scroll when menu is open
+.menuopen {
+  overflow: hidden;
+}

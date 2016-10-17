@@ -1,0 +1,115 @@
+.about-page {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  p.intro {
+    font-size: em(20px);
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  h3, img, .line, p {
+    margin-bottom: 15px;
+  }
+
+  .line {
+    display: block;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  .button {
+    @include border-radius(4px);
+
+    display: block;
+    text-align: center;
+    height: 38px;
+    background: $grey;
+    color: #acacac;
+    padding: 5px 15px;
+    line-height: 28px;
+    font-size: em(16px);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 20px 0 20px 0;
+
+    &.yellow {
+      background: $yellow;
+      color: $grey;
+    }
+  }
+}
+
+@media (min-width: $desktopmq) {
+  .about-page {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    p.intro {
+      font-size: em(20px);
+    }
+
+    h3, img, .line, p {
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block !important;
+      margin: 20px 0 15px 0;
+
+      @include transition(all 250ms 0ms ease);
+
+      &:hover {
+        background: #464646 !important;
+        color: white;
+      }
+
+      &.yellow:hover {
+        background: lighten($yellow, 10%) !important;
+        color: $grey;
+      }
+    }
+  }
+}
+
+.contact-page {
+  .map {
+    height: 400px;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    input {
+      margin-bottom: 15px;
+    }
+
+    .datepicker {
+      margin-top: 15px;
+    }
+
+    input[type="submit"] {
+      margin-top: 15px;
+    }
+  }
+}
+
+@media (min-width: $desktopmq) {
+  .contact-page {
+    .map {
+      height: 670px;
+    }
+
+    p.intro {
+      padding: 0 15px;
+    }
+
+    p.located {
+      padding: 10px 0 0 0;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+}

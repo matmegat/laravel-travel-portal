@@ -1,0 +1,77 @@
+// ** Main Config
+
+// Type
+$bfont: "freight-sans-pro", sans-serif;
+$hfont: "freight-sans-pro", sans-serif;
+
+// Font Sizes
+$base-font-size: 16px;
+$sizebody: 100%;
+$sizeh1: 21px;
+$sizeh2: 21px;
+$sizeh3: 21px;
+$sizeh4: 21px;
+$sizeh5: 21px;
+$sizeh6: 21px;
+
+// Color
+$bodycolor: #222222;
+$headingcolor: #222222;
+$yellow: #ffc324;
+$grey: #222222;
+$lightgrey: #acacac;
+$white: white;
+
+// Layout & MQ's
+$maxwidth: 990px;
+$tabletmq: 500px;
+$desktopmq: 769px;
+$lgdesktopmq: 1170px;
+
+// ** Mixins
+// PX to EM converter
+@function em($px, $base: $base-font-size) {
+  @return $px / $base * 1em;
+}
+
+// Clearfix - Usage: @include clearfix();
+@mixin clearfix {
+  & {
+    *zoom: 1;
+  }
+
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Vertical Align Anything
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// Opacity - Usage: @include opacity(0.8);
+@mixin opacity($opacity) {
+  opacity: $opacity;
+
+  $opacity-ie: $opacity * 100;
+
+  filter: alpha(opacity = $opacity-ie);
+}
+
+// Enable Hardware Exceleration on element
+@mixin hardware {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}

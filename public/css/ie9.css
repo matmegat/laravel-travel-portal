@@ -1,0 +1,3 @@
+.section_results .result .info .description:after {
+  filter: none !important;
+}

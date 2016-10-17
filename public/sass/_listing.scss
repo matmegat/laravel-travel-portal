@@ -1,0 +1,277 @@
+// Listing templates
+.main-list {
+  .item {
+    border-bottom: 1px solid #f1f1f1;
+    position: relative;
+
+    .image {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .details {
+      padding-top: 15px;
+      position: inherit;
+    }
+
+    .actions {
+      padding-top: 15px;
+    }
+
+    .featured {
+      position: absolute;
+      top: 0;
+      right: 15px;
+      background: red;
+      width: 32px;
+      height: 32px;
+      display: block;
+    }
+
+    img {
+      margin: 0 0 -3px 0;
+    }
+
+    .type {
+      font-size: 12px;
+      color: $yellow;
+      letter-spacing: 3px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: em(28px);
+      font-weight: 500;
+      margin: 7px 0 15px 0;
+
+      small {
+        font-size: 14px;
+        font-style: italic;
+        display: block;
+      }
+
+      a {
+        color: $grey;
+      }
+    }
+
+    .live-chat {
+      float: left;
+      margin-top: 14px;
+
+      a {
+        font-weight: bold;
+        color: $yellow;
+      }
+    }
+
+    .star {
+      float: left;
+      padding-top: 10px;
+
+      li {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 1px;
+        text-indent: -9999px;
+      }
+    }
+
+    .length {
+      display: none;
+    }
+
+    .description {
+      overflow: hidden;
+      display: -webkit-box;
+      height: 80px;
+      margin: 0 auto;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+    }
+
+    .rate {
+      text-align: right;
+      float: right;
+      font-size: em(32px);
+      font-weight: 600;
+
+      span {
+        display: inline-block;
+        font-size: 15px;
+        font-style: italic;
+        font-weight: normal;
+        padding-right: 5px;
+        line-height: 24px;
+      }
+    }
+
+    .more {
+      @include border-radius(4px);
+
+      display: block;
+      text-align: center;
+      height: 38px;
+      background: $grey;
+      color: #acacac;
+      padding: 5px 15px;
+      line-height: 28px;
+      font-size: em(16px);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin: 20px 0 20px 0;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+
+    .diving {
+      background: url(../img/base64/item/item-diving.svg) no-repeat center center;
+      background-size: 26px;
+    }
+
+    .family {
+      background: url(../img/base64/item/item-family.svg) no-repeat center center;
+      background-size: 26px;
+    }
+
+    .adventure {
+      background: url(../img/base64/item/item-adventure.svg) no-repeat center center;
+      background-size: 26px;
+    }
+  }
+}
+
+@media (min-width: $desktopmq) {
+  // Listing templates
+  .main-list {
+    .item {
+      border-bottom: 1px solid #f1f1f1;
+      position: relative;
+
+      .image {
+        padding-left: 0;
+        padding-right: 15px;
+        overflow: hidden;
+      }
+
+      img {
+        @include transition(all 350ms ease);
+      }
+
+      a:hover img {
+        opacity: 0.8;
+      }
+
+      .details {
+        padding-top: 15px;
+        position: inherit;
+      }
+
+      .actions {
+        padding-top: 20px;
+        text-align: right;
+      }
+
+      .featured {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        background: red;
+        width: 32px;
+        height: 32px;
+        display: block;
+      }
+
+      .image {
+        img {
+          margin: 0 0 -3px 0;
+          min-width: 315px;
+          max-height: 400px;
+          width: auto;
+          height: auto;
+        }
+      }
+
+      .type {
+        font-size: 12px;
+        color: $yellow;
+        letter-spacing: 3px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      h3 {
+        font-size: em(28px);
+        font-weight: 500;
+        margin: 7px 0 15px 0;
+
+        small {
+          display: inline;
+        }
+
+        a:hover {
+          color: #464646;
+        }
+      }
+
+      .live-chat {
+        position: absolute;
+        bottom: 18px;
+        right: 15px;
+
+        a {
+          font-weight: bold;
+          color: $yellow;
+        }
+      }
+
+      .star {
+        position: absolute;
+        bottom: 18px;
+        right: 15px;
+      }
+
+      .length {
+        position: absolute;
+        bottom: 59px;
+        right: 15px;
+      }
+
+      p {}
+
+      .rate {
+        text-align: right;
+        font-size: em(32px);
+        font-weight: 600;
+
+        span {
+          display: block;
+          font-size: 15px;
+          font-style: italic;
+          font-weight: normal;
+        }
+      }
+
+      .more {
+        display: inline-block !important;
+        margin: 10px 0 10 0;
+
+        @include transition(all 250ms 0ms ease);
+
+        &:hover {
+          background: #464646 !important;
+          color: white;
+        }
+      }
+
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+}

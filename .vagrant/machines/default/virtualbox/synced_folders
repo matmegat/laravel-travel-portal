@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/Code":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/Code","hostpath":"C:/UniServer/www","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/UniServer/www/visits.com.au","disabled":false,"__vagrantfile":true}}}

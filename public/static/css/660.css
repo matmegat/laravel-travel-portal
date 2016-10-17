@@ -1,0 +1,218 @@
+/*  MAKE LAYOUT RESPONSIVE at 480px FOR IPHONE LANDSCAPE ============================================ */
+
+#masthead, #masthead .wrapper {
+    height:auto;
+    width:100%;
+    float:left;
+    margin:0;
+}
+#masthead nav {
+    position:static;
+    display:block;
+    background:#444;
+}
+#masthead .logo {
+    display:block;
+    margin:25px auto;
+    float:none;
+}
+#masthead nav ul {
+    width:auto !important;
+    margin:0 10px;
+    padding-top:10px;
+    display:block !important;
+    float:none !important;
+}
+#masthead nav ul li {
+    display:block !important;
+    float:none !important;
+}
+#masthead nav ul li.current a {
+    -webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	-o-border-radius:4px;
+	-ms-border-radius:4px;
+	border-radius:4px;
+}
+#masthead nav .secondary {
+    padding-top:10px;
+    border-top:1px solid #333;
+}
+#masthead .other_locations {
+    display:none;
+}
+
+#breadcrumb {
+    height:auto;
+    padding-bottom:20px;
+}
+#breadcrumb .col {
+    width:100%;
+    margin-left:0;
+    margin-right:0;
+}
+#breadcrumb .search {
+    width:100%;
+}
+
+.main_content article .time {
+    float:none;
+    display:block;
+    margin-bottom:10px;
+    text-align:left;
+}
+
+.lines_bg {
+    height:auto;
+}
+
+#hero section {
+    position:absolute;
+    height:270px;
+    width:auto;
+    min-width:300px;
+    margin:0 auto;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.75);
+}
+#hero form {
+    width:300px;
+    margin:40px auto;
+    float:none;
+    display:block;
+}
+#hero form div {
+    display:block;
+    margin:10px 0 0 0;
+}
+#hero input.text {
+    width:280px;
+    margin:0 auto;
+}
+#hero input.half {
+    width:127px;
+    float:left;
+    margin:0 5px;
+}
+#hero .accommodation_form .search {
+    width:135px;
+    margin-right:8px;
+    background-position:100px -4px;
+}
+#hero .title {
+    bottom:auto;
+    top:20px;
+    left:10px;
+    right:10px;
+    margin:0;
+    text-align:center;
+}
+
+#hero .flights_title {
+    display:none;
+}
+#hero .flights_section, #hero .car_section {
+    width:auto;
+    min-width:300px;
+}
+#hero .flights_form h1 {
+    text-align:center;
+}
+#hero .flights_form, #hero .car_section form {
+    width:300px;
+    margin:10px auto;
+}
+#hero .car_section form label {
+    display:none;
+}
+#hero .flights_form input.text {
+    width:280px;
+    margin:0 auto;
+}
+#hero .flights_form input.half {
+    width:127px;
+    float:left;
+    margin:0 5px;
+}
+#hero .flights_form input.third, #hero .flights_form span.third {
+    width:81px;
+}
+#hero .car_section form .search, #hero .car_section form a {
+    margin-right:50px;
+}
+#hero .car_section form h1 {
+    font-size:26px;
+    text-align:center;
+}
+
+/* -- Properties --*/
+.properties section {
+    max-width:300px;
+    float:none;
+    display:block;
+    margin:20px auto 0 auto;
+}
+.properties section:nth-child(4), .properties section:nth-child(7), .properties section:nth-child(11), .properties .col:first-child {
+    margin-left:auto;
+}
+.hotel_list .listed_hotel .hotel_price {
+    text-align:left;
+}
+.hotel_booked .room_overview .col {
+    width:100%;
+}
+.hotel_booked .room_overview li:nth-child(2) {
+    border-left:0;
+    text-align:left;
+}
+.user_form .col, .payment_detail .col {
+    width:100%;
+    margin-left:0;
+}
+.hotel_info .span_1_of_2 {
+    width:100%;
+    margin-left:0;
+}
+
+/* -- Flights --*/
+.flight_deal .flight_overview .col {
+    width:100%;
+    border:0;
+    margin-left:0;
+    min-height:0;
+}
+
+/* -- Cars --*/
+.cars .car .details {
+    margin-right:20px;
+    margin-left:20px;
+}
+.cars .car {
+    min-height:0;
+}
+.cars .car .booking {
+    background:#f2f2f2;
+    min-height:180px;
+    width:150px;
+    position:relative;
+    display:block;
+    margin:1% auto 0 auto;
+}
+
+/* -- Blog --*/
+#blog_header h1 {
+    font-size:30px;
+}
+
+/* -- Sidebar --*/
+.big_sidebar, .sidebar_map {
+    padding:0;
+    width:100%;
+    position:static;
+    margin:0;
+}
+.big_sidebar_bg {
+    display:none;
+}

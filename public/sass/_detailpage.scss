@@ -1,0 +1,441 @@
+.detailpage {
+  position: relative;
+  top: -97px;
+  margin-bottom: -90px;
+  z-index: 99;
+  margin-bottom: -60px;
+
+  .page-title {
+    position: relative;
+
+    .col-md-8 {
+      background: $yellow;
+      padding: 15px;
+    }
+
+    .col-md-4 {
+      background: $grey;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: left;
+    }
+
+    h1 {
+      font-size: em(30px);
+      text-transform: uppercase;
+    }
+
+    p {
+      padding: 0;
+      font-size: em(18px);
+    }
+  }
+
+  aside {
+    background: $grey;
+    padding-bottom: 15px;
+
+    dl {
+      color: #acacac;
+      font-size: em(20px);
+    }
+
+    dt {
+      text-transform: uppercase;
+      padding-top: 15px;
+    }
+
+    dd {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 15px;
+
+      &:last-child {
+        border: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .button {
+    @include border-radius(4px);
+
+    display: block;
+    text-align: center;
+    height: 48px;
+    background: $grey;
+    color: #acacac;
+    padding: 5px 15px;
+    line-height: 38px;
+    font-size: em(16px);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 20px 0 0 0;
+
+    &.yellow {
+      background: $yellow;
+      color: $grey;
+    }
+  }
+
+  p.intro {
+    font-size: em(20px);
+    margin-bottom: 15px;
+  }
+
+  article {
+    h5 {
+      margin-bottom: 15px;
+
+      &:first-child {
+        margin-top: 15px;
+      }
+    }
+
+    p {
+      margin: 10px 0;
+
+      &:first-child {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .amenities {
+    margin-bottom: 15px;
+
+    li {
+      width: 50%;
+      display: inline-block;
+      float: left;
+      height: 20px;
+      line-height: 20px;
+      font-size: em(20px);
+    }
+  }
+
+  form {
+    label {
+      color: #a7a7a7;
+    }
+
+    input {
+      margin-bottom: 15px;
+    }
+
+    input:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  #scroll-down {
+    display: none !important;
+    border-radius: 4px;
+    margin: 25px auto;
+    height: 40px;
+    width: 200px;
+    line-height: 30px;
+  }
+
+  .price {
+    margin-top: 25px;
+    color: $yellow;
+    font-size: em(22px);
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (min-width: $desktopmq) {
+  .detailpage {
+    @include box-shadow(0px 3px 2px 0px rgba(0, 0, 0, 0.1));
+
+    margin-bottom: 20px;
+    margin-bottom: -40px;
+
+    .page-title {
+      .col-md-8 {
+        min-height: 97px;
+      }
+
+      .col-md-4 {
+        min-height: 97px;
+        text-align: center;
+
+        span {
+          line-height: 88px;
+        }
+
+        text-align: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+      }
+
+      h1 {
+        margin-bottom: 7px;
+        padding: 0 15px;
+      }
+
+      p {
+        padding: 0 15px;
+      }
+    }
+
+    aside {
+      padding-bottom: 0;
+      #position: fixed;
+      left: auto;
+      top: 0;
+
+      dl {
+        color: #acacac;
+        font-size: em(20px);
+      }
+
+      dt {
+        text-transform: uppercase;
+        padding: 25px 15px 0 15px;
+      }
+
+      dd {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0 15px 25px 15px;
+      }
+
+      &.no-book {
+        padding-bottom: 25px;
+      }
+    }
+
+    .button {
+      display: block !important;
+      margin: 35px -15px 0px -15px;
+
+      @include transition(all 250ms 0ms ease);
+
+      @include border-radius(0px);
+
+      height: 58px;
+      line-height: 48px;
+
+      &:hover {
+        background: #464646 !important;
+        color: white;
+      }
+
+      &.yellow:hover {
+        background: lighten($yellow, 10%) !important;
+        color: $grey;
+      }
+    }
+
+    p.intro {
+      padding-left: 15px;
+      padding-right: 15px;
+      line-height: 24px;
+    }
+
+    article {
+      h5 {
+        padding: 0 15px;
+        margin-top: 25px;
+
+        &:first-child {
+          margin-top: 25px;
+        }
+      }
+    }
+
+    .amenities {
+      padding: 0 15px;
+      margin-bottom: 25px;
+
+      li {
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+
+    form {
+      padding: 0 15px;
+    }
+
+    #scroll-down {
+      display: inline-block !important;
+    }
+  }
+}
+
+// Page Tabs
+.tour-tabs {
+  background: $grey !important;
+  height: 50px;
+
+  a {
+    height: 50px;
+    color: #acacac;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 28px;
+    padding: 10px;
+    font-size: em(20px);
+
+    span {
+      display: none;
+    }
+
+    &.active {
+      background: $yellow;
+      color: $grey;
+    }
+  }
+
+  a:last-child {
+    border-left: 1px solid #373737;
+  }
+}
+
+.tour-tab-content {
+  min-height: 100px;
+  margin-bottom: 20px;
+
+  .tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  p.intro {
+    font-size: em(20px);
+    margin-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .amenities {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    li {
+      width: 50%;
+      display: inline-block;
+      float: left;
+      height: 20px;
+      line-height: 20px;
+      font-size: em(20px);
+    }
+  }
+
+  .item {
+    border-bottom: 1px solid #e7e7e7;
+    padding: 15px 0;
+    font-size: em(20px);
+
+    &:last-child {
+      border: 0;
+    }
+
+    .col-xs-12 {
+      padding-top: 5px;
+    }
+  }
+
+  .button {
+    @include border-radius(4px);
+
+    display: block;
+    text-align: center;
+    height: 48px;
+    background: $grey;
+    color: #acacac;
+    padding: 5px 15px;
+    line-height: 38px;
+    font-size: em(16px);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0;
+
+    &.yellow {
+      background: $yellow;
+      color: $grey;
+    }
+  }
+}
+
+@media (min-width: $desktopmq) {
+  .tour-tabs {
+    height: 60px;
+
+    a {
+      height: 60px;
+      line-height: 28px;
+      padding: 15px;
+
+      @include transition(all 250ms 0ms ease);
+
+      span {
+        display: inline;
+      }
+
+      &:hover {
+        background: #373737;
+      }
+
+      &.active:hover {
+        background: $yellow;
+        color: $grey;
+        cursor: inherit;
+      }
+    }
+
+    a:last-child {
+      border-left: 1px solid #373737;
+
+      &.active {
+        border-left: 1px solid $yellow;
+      }
+    }
+
+    a:first-child {
+      border-right: 1px solid #373737;
+
+      &.active {
+        border-right: 1px solid $yellow;
+      }
+    }
+  }
+
+  .tour-tab-content {
+    @include box-shadow(0px 3px 2px 0px rgba(0, 0, 0, 0.1));
+
+    margin-bottom: 40px;
+
+    p.intro {
+      padding: 30px 15px;
+      line-height: 24px;
+    }
+
+    .amenities {
+      padding: 0 15px;
+      margin-bottom: 25px;
+      margin-top: 25px;
+
+      li {
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+
+    .item {
+      padding: 25px 15px;
+
+      .col-xs-12 {
+        padding-top: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.notification {
+  position: fixed;
+  top: -100px;
+  text-align: center;
+  width: 100%;
+  z-index: 999999;
+  padding: 0 15px;
+  -webkit-transition: all 350ms ease;
+  -moz-transition: all 350ms ease;
+  transition: all 350ms ease;
+
+  &.active {
+    top: 40px;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: white;
+    background-color: $yellow;
+
+    @include border-radius(4px);
+
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,66 @@
+body.fourohfour {
+  background: $grey;
+}
+
+.fourohfour-header {
+  position: relative;
+  background: white;
+  height: 300px;
+  text-align: center;
+  padding-top: 20px;
+  background: url(../img/header-bg/wrongturn.jpg) no-repeat;
+  background-size: cover;
+
+  h1 {
+    font-size: 9em;
+    line-height: 1.2;
+    color: white;
+    text-shadow: 0 0 10px #333;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    color: white;
+    text-shadow: 0 0 10px #333;
+  }
+}
+
+.fourohfour-footer {
+  text-align: center;
+  border-top: 2px solid $yellow;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 2em;
+
+  .logo {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0 auto 1em auto;
+  }
+
+  form {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 2em;
+
+    input {
+      display: inline-block;
+      width: 500px;
+      padding: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .fourohfour-header {
+    padding: 1em 0 3em 0;
+    height: auto;
+  }
+
+  .fourohfour-footer {
+    form input {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,327 @@
+.aside-filter {
+  background: $grey;
+  overflow: hidden;
+  color: white;
+
+  h5 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: em(20px);
+  }
+
+  .heading {
+    height: 50px;
+
+    h5 {
+      float: left;
+      line-height: 48px;
+      margin: 0;
+    }
+
+    a {
+      float: right;
+      color: $yellow;
+      line-height: 48px;
+    }
+  }
+
+  .fp-checkbox {
+    border: 1px solid $yellow;
+  }
+
+  .fp-checkbox:hover, .fp-radio:hover {
+    cursor: pointer;
+    border: 1px solid $yellow;
+  }
+
+  .fp-checkbox.checked, .fp-radio.checked {
+    border: 1px solid $yellow;
+    background-color: $yellow;
+  }
+
+  .item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    div {
+      margin-bottom: 10px;
+
+      .fp-checkbox {
+        margin-left: 15px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .sections {
+      .start {}
+
+      .end {
+        float: right;
+      }
+    }
+
+    .noUi-target {
+      margin-bottom: 15px !important;
+    }
+  }
+}
+
+.filter-content {
+  display: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media (min-width: $desktopmq) {
+  .aside-filter {
+    padding: 0 25px;
+
+    .heading {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .showfilter {
+    display: none;
+  }
+
+  .filter-content {
+    display: block !important;
+  }
+}
+
+// flight List
+.flight-result-filter {
+  background: #f8f8f8;
+  border-bottom: 1px solid #f1f1f1;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  p {}
+
+  a {
+    float: right;
+    font-weight: 600;
+    color: $grey;
+  }
+}
+
+.flight-overview {
+  border-bottom: 1px solid #f1f1f1;
+  padding: 10px 0;
+}
+
+.flight-name {
+  position: relative;
+  padding-left: 70px;
+  padding-right: 0;
+
+  img {
+    position: absolute;
+    max-width: 45px;
+    left: 10px;
+    top: 0;
+  }
+
+  h5 {
+    font-size: em(18px);
+    margin-bottom: 5px;
+  }
+}
+
+.flight-rate {
+  text-align: center;
+  padding-right: 0;
+
+  p {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    font-size: em(20px);
+  }
+}
+
+.show-more {
+  padding: 0;
+
+  a {
+    opacity: 0.5;
+    height: 45px;
+    width: 45px;
+    display: block;
+    float: right;
+    background: url(../img/base64/icon-dropdown.svg) no-repeat center center;
+    background-size: 45px auto;
+    text-indent: -9999px;
+  }
+}
+
+.flight-details {
+  display: none;
+
+  .intro {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f1f1f1;
+    background: #f8f8f8;
+
+    h5 {
+      text-align: center;
+      font-size: em(18px);
+      font-weight: 500;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+
+    p {
+      text-align: center;
+      line-height: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .itinerary {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    h5 {
+      font-size: em(20px);
+      font-weight: 500;
+      line-height: 20px;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    span.flyicon {
+      width: 50px;
+      height: 20px;
+      background: url(../img/base64/icon-fly.svg) no-repeat center center;
+      background-size: 50px 20px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .duration {
+      display: block;
+    }
+  }
+
+  .layover {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #f8f8f8;
+    text-align: center;
+
+    h5 {
+      font-size: em(18px);
+      font-weight: 500;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  .booknow {
+    background: $yellow;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    a {
+      color: $grey;
+      display: block;
+      font-size: em(18px);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}
+
+@media (min-width: $desktopmq) {
+  .flight-overview {
+    padding: 20px 0;
+    border-left: 1px solid #f1f1f1;
+  }
+
+  .flight-name {
+    padding-left: 110px;
+
+    img {
+      max-width: 55px;
+      left: 20px;
+      top: -5px;
+    }
+
+    h5 {
+      font-size: em(22px);
+      padding-top: 3px;
+    }
+  }
+
+  .flight-rate {
+    padding-left: 0;
+    padding-right: 15px;
+
+    p {
+      font-size: 14px;
+    }
+
+    h3 {
+      font-size: em(26px);
+    }
+  }
+
+  .show-more {
+    padding-right: 10px;
+  }
+
+  .flight-details {
+    .intro {
+      h5 {
+        text-align: left;
+      }
+
+      p {
+        text-align: right;
+      }
+    }
+
+    .itinerary {
+      padding-top: 25px;
+      padding-bottom: 15px;
+
+      span.flyicon, .duration {
+        margin-top: 30px;
+      }
+    }
+
+    .booknow {
+      @include transition(all 350ms ease);
+    }
+
+    .booknow:hover {
+      background: lighten($yellow, 10%);
+    }
+  }
+}

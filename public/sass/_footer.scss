@@ -1,0 +1,196 @@
+// Footer Styles
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: $grey;
+
+  h3 {
+    color: $yellow;
+    font-size: em(18px);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: #d2d2d2;
+    padding-bottom: 15px;
+    font-size: em(16px);
+    line-height: 20px;
+  }
+
+  a {
+    color: #d2d2d2;
+  }
+
+  .contact-us {
+    p {
+      font-size: em(18px);
+      line-height: 24px;
+    }
+
+    p:last-child {
+      font-size: em(16px);
+      line-height: 20px;
+    }
+  }
+
+  // .follow-us {padding-top:5px;}
+
+  .footer-top {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid $yellow;
+  }
+
+  .footer-bottom {
+    margin-bottom: 3em;
+  }
+
+  .cert-search {
+    .eco-cert {
+      background: url(../img/footer/adv_cert.png) no-repeat center center;
+      background-size: 120px;
+      text-indent: -9999px;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2em auto;
+    }
+  }
+
+  .social-icons {
+    li {
+      display: inline-block;
+    }
+
+    a {
+      text-indent: -9999px;
+      width: 32px;
+      height: 32px;
+      margin-right: 1em;
+      display: inline-block;
+    }
+
+    .facebook a {
+      background: url(../img/base64/icon-facebook.svg) no-repeat center center;
+      background-size: 28px;
+    }
+
+    .twitter a {
+      background: url(../img/base64/icon-twitter.svg) no-repeat center center;
+      background-size: 28px;
+    }
+
+    .googleplus a {
+      background: url(../img/base64/icon-googleplus.svg) no-repeat center center;
+      background-size: 28px;
+    }
+
+    .youtube a {
+      background: url(../img/base64/icon-youtube.svg) no-repeat center center;
+      background-size: 28px;
+    }
+  }
+
+  .email-link {
+    background: url(../img/base64/icon-email.svg) no-repeat left center;
+    background-size: 18px auto;
+    font-size: em(18px);
+    display: inline-block;
+    height: 55px;
+    padding-left: 30px;
+    line-height: 51px;
+    color: white;
+  }
+
+  .visits {
+    padding-top: 30px;
+
+    ul {
+      margin: 10px 0 15px 0;
+    }
+
+    a {
+      display: block;
+      font-size: em(18px);
+      line-height: 24px;
+    }
+  }
+
+  .copyright {
+    color: #999999;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: $desktopmq) {
+  footer {
+    padding: 35px 0 15px 0;
+    text-align: left;
+
+    p {
+      padding-bottom: 20px;
+    }
+
+    .follow-us {
+      padding-top: 10px;
+    }
+
+    .social-icons a {
+      @include transition(all 250ms ease);
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    .email-link {
+      @include transition(all 250ms ease);
+
+      padding-top: 1px;
+
+      &:hover {
+        padding-left: 33px;
+        padding-right: 2px;
+      }
+    }
+
+    .visits {
+      padding-top: 0;
+
+      ul {
+        margin: 10px 0 35px 0;
+      }
+
+      a {
+        @include transition(all 250ms ease);
+
+        &:hover {
+          padding-left: 2px;
+        }
+      }
+    }
+
+    .eco-cert {
+      display: inline-block;
+      float: right;
+      clear: both;
+      margin-right: 15px;
+    }
+
+    form {
+      text-align: right;
+    }
+
+    .copyright {
+      padding-top: 9px;
+      text-align: right;
+    }
+  }
+}

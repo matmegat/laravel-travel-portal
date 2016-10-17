@@ -1,0 +1,65 @@
+// Type styles
+html, body {}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  font-size: 87.5%;
+  color: $bodycolor;
+  font-family: $bfont;
+}
+
+// Headings
+#{headings()} {
+  font-weight: 700;
+  color: $headingcolor;
+  font-family: $hfont;
+}
+
+h1 {
+  font-size: $sizeh1;
+}
+
+h2 {
+  font-size: $sizeh2;
+}
+
+h3 {
+  font-size: $sizeh3;
+}
+
+h4 {
+  font-size: $sizeh4;
+}
+
+h5 {
+  font-size: $sizeh5;
+}
+
+h6 {
+  font-size: $sizeh6;
+}
+
+p {
+  font-size: em(16px);
+  line-height: 1.25em;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+@media (min-width: $tabletmq) {
+  body {
+    font-size: 100%;
+  }
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}

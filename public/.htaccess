@@ -1,0 +1,28 @@
+<IfModule mod_rewrite.c>
+	<IfModule mod_negotiation.c>
+    	Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect from not main domain
+    RewriteCond %{HTTP_HOST} ^(www\.)?(adelaide|airliebeach|auckland|bayofislands|brisbane|cairns|centralcoast|christchurch|darwin|exmouth|gladstone|goldcoast|hobart|ipswich|launceston|mackay|melbourne|perth|queenstown|recreationtravel|recreation|rotorua|sunshinecoast|sydney)(\.cm|\.com\.au|\.ac|\.co|\.io|\.travel) [NC]
+    RewriteRule ^(.*)$ https://visits.com.au [R=301,NC,L]
+
+    # Redirect Trailing Slashes...
+	RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Redirect www to non-www
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+    # Redirect http to https
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP_HOST} ^visits\.com\.au$ [NC]
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+	# Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ /index.php [L]
+</IfModule>

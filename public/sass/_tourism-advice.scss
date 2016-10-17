@@ -1,0 +1,43 @@
+.tourism-advice-page {
+  h5 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    padding-bottom: 25px;
+    border-bottom: 1px solid $lightgrey;
+  }
+
+  .intro-text {
+    border: none;
+  }
+
+  .tour-advice {
+    .row {
+      margin-bottom: 25px;
+
+      p {
+        border-bottom: none;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.max-width-img {
+  max-width: 40px;
+  margin: 0 auto;
+  display: block;
+
+  &.-bigger {
+    max-width: 65px;
+  }
+}
+
+@media (max-width: $desktopmq) {
+  .small-img-mobile {
+    max-width: 100px;
+    margin: 0 auto;
+    display: block;
+  }
+}

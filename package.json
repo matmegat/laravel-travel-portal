@@ -1,0 +1,16 @@
+{
+  "name": "Visits",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matmegat/laravel-travel-portal.git"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.1.0"
+  }
+}

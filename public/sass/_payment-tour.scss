@@ -1,0 +1,33 @@
+.payment-tour-header {
+  padding-bottom: 130px !important;
+
+  h1 {
+    line-height: 1.25em !important;
+    font-size: 35px;
+  }
+}
+
+.payment-tour {
+  h5 {
+    margin: 20px 0 0 0;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  .total-cost {
+    color: $white;
+
+    h5 {
+      margin-top: 20px;
+      color: $white;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .content {
+      padding: 20px 30px;
+    }
+  }
+}

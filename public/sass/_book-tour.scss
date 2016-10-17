@@ -1,0 +1,32 @@
+.book-tour-page {
+  input, .fp-select {
+    margin-bottom: 15px;
+  }
+
+  a.full-size {
+    display: block !important;
+    margin: 0;
+  }
+}
+
+.summary {
+  background: $grey;
+  color: $lightgrey;
+  padding: 15px;
+
+  h5 {
+    color: $white;
+  }
+
+  p {
+    padding-bottom: 25px;
+    border-bottom: 1px solid $yellow;
+    margin-bottom: 25px;
+
+    &:last-child {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

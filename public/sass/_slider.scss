@@ -1,0 +1,179 @@
+// Required
+.home-slider {
+  position: relative;
+
+  .slides-container {
+    display: none;
+  }
+
+  .scrollable {
+    @include clearfix;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+  }
+
+  .slide-content {
+    max-width: $maxwidth;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    left: 0;
+    height: 100px;
+    padding: 15px;
+
+    span {
+      @include transition(all 250ms 0ms ease);
+
+      position: absolute;
+      top: 0;
+      left: 15px;
+      width: 40px;
+      height: 40px;
+    }
+
+    h2 {
+      @include transition(all 250ms 100ms ease);
+
+      color: white;
+      position: absolute;
+      top: 50px;
+      left: 15px;
+      font-size: em(38px);
+      text-transform: uppercase;
+      letter-spacing: -2px;
+      line-height: 20px;
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    p {
+      @include transition(all 250ms 200ms ease);
+
+      color: white;
+      position: absolute;
+      top: 82px;
+      left: 15px;
+      font-weight: 600;
+      max-width: 290px;
+      font-size: em(20px);
+      line-height: em(14px);
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .diving span {
+    background: url(../img/base64/icon-boat.svg) no-repeat center center;
+    background-size: 40px;
+  }
+
+  .adventure span {
+    background: url(../img/base64/icon-adventure.svg) no-repeat center center;
+    background-size: 40px;
+  }
+
+  .australia span {
+    background: url(../img/base64/icon-aus.svg) no-repeat center center;
+    background-size: 40px;
+  }
+
+  &.animating {
+    .slide-content {
+      //bottom: -100px;
+      span, h2, p {
+        top: 300px;
+      }
+
+      span {
+        @include transition(all 250ms 200ms ease);
+      }
+
+      h2 {
+        @include transition(all 250ms 100ms ease);
+      }
+
+      p {
+        @include transition(all 250ms 0ms ease);
+      }
+    }
+  }
+}
+
+.slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 3;
+  top: 46%;
+  width: 100%;
+  display: none;
+
+  a {
+    position: absolute;
+    display: block;
+
+    &.prev {
+      left: 0;
+    }
+
+    &.next {
+      right: 0;
+    }
+  }
+}
+
+.slides-pagination {
+  display: none;
+}
+
+@media (min-width: $tabletmq) {
+  .home-slider {
+    .slide-content {
+      bottom: 250px;
+      height: 100px;
+
+      span {
+        top: 0;
+        width: 70px;
+        height: 70px;
+      }
+
+      h2 {
+        top: 70px;
+        font-size: em(60px);
+        line-height: 70px;
+      }
+
+      p {
+        top: 140px;
+        font-size: em(26px);
+        line-height: em(18px);
+        max-width: 500px;
+      }
+    }
+
+    .diving span {
+      background-size: 70px;
+    }
+
+    .adventure span {
+      background-size: 70px;
+    }
+
+    .australia span {
+      background-size: 70px;
+    }
+
+    &.animating {
+      .slide-content {
+        //bottom: -100px;
+        span, h2, p {
+          top: 300px;
+        }
+      }
+    }
+  }
+}

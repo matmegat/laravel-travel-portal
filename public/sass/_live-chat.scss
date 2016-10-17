@@ -1,0 +1,7 @@
+#livechat-compact-container {
+  display: none;
+
+  @media (min-width: $desktopmq) {
+    display: block;
+  }
+}

@@ -1,0 +1,17 @@
+/*  MAKE LAYOUT RESPONSIVE at 1024px FOR SMALLER SCREENS ================================================================ */
+
+.wrapper {
+    width:auto;
+    display:block;
+    margin-left:20px;
+    margin-right:20px;
+}
+#hero .title {
+    left:490px;
+}
+#hero .flights_title, #hero .cars_title {
+    left:580px;
+}
+.sidebar_map, .big_sidebar_bg {
+    margin-left:17%;
+}
